@@ -148,7 +148,7 @@
             }
         }
 
-        /* --- Schedule Cards --- */
+        /* --- Schedule Cards & General Cards --- */
         .day-section {
             background-color: var(--panel-bg);
             color: var(--text-main);
@@ -232,11 +232,23 @@
             font-size: 13px;
         }
 
+        /* --- Leaflet Images --- */
+        .leaflet-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .leaflet-image:last-child {
+            border-bottom: none;
+        }
+
         /* --- Full Bleed Map Class --- */
         .full-bleed-map {
-            margin: -20px; /* Removes the 20px padding from the main-content wrapper */
+            margin: -20px; 
             height: calc(100vh - var(--top-bar-height) - var(--bottom-nav-height));
-            background-color: #e5e3df; /* Standard maps background color */
+            background-color: #e5e3df; 
         }
 
         .full-bleed-map iframe {
@@ -276,12 +288,12 @@
         }
 
         .bottom-nav-item i {
-            font-size: 22px;
-            margin-bottom: 5px;
+            font-size: 20px;
+            margin-bottom: 4px;
         }
 
         .bottom-nav-item span {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
             text-transform: uppercase;
         }
@@ -306,6 +318,7 @@
             <li><a class="menu-item active" data-target="schedule"><i class="fas fa-calendar-alt"></i> PLAN</a></li>
             <li><a class="menu-item" data-target="organizers"><i class="fas fa-info-circle"></i> INFO & CONTACT</a></li>
             <li><a class="menu-item" data-target="map"><i class="fas fa-map-marker-alt"></i> MAP</a></li>
+            <li><a class="menu-item" data-target="leaflet"><i class="fas fa-book-open"></i> LEAFLET</a></li>
         </ul>
         <div class="menu-footer">
             Welcome to Gdynia App
@@ -567,7 +580,7 @@
                 <h2 style="color: var(--accent-color); margin-bottom: 15px;">ADDRESSES AND CONTACTS</h2>
                 <p><strong><i class="fas fa-phone-alt"></i> Emergency numbers:</strong></p>
                 <ul style="list-style: none; padding-left: 20px; margin-bottom: 20px; color: var(--text-muted);">
-                    <li>112 - General emergency number</li>
+                    <li>112 - General e. n.</li>
                     <li>999 - Ambulance</li>
                     <li>998 - Fire Brigade</li>
                     <li>997 - Police</li>
@@ -592,6 +605,18 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
+
+        <div id="view-leaflet" class="view-section" style="display: none;">
+            <div class="day-section">
+                <div class="day-header">
+                    <i class="fas fa-book-open"></i>
+                    <span class="day-title">Event Leaflet</span>
+                </div>
+                <img src="1.png" alt="Leaflet Page 1" class="leaflet-image" onerror="this.src='https://placehold.co/600x800/050a44/ff5e00?text=Insert+Image+1+Here'">
+                
+                <img src="2.png" alt="Leaflet Page 2" class="leaflet-image" onerror="this.src='https://placehold.co/600x800/050a44/ff5e00?text=Insert+Image+2+Here'">
+            </div>
+        </div>
         
     </main>
 
@@ -607,6 +632,10 @@
         <div class="bottom-nav-item" data-target="map">
             <i class="fas fa-map-marked-alt"></i>
             <span>MAP</span>
+        </div>
+        <div class="bottom-nav-item" data-target="leaflet">
+            <i class="fas fa-book-open"></i>
+            <span>LEAFLET</span>
         </div>
     </nav>
 
