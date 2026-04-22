@@ -316,7 +316,6 @@
     <nav class="side-menu" id="sideMenu">
         <ul class="menu-list">
             <li><a class="menu-item active" data-target="schedule"><i class="fas fa-calendar-alt"></i> PLAN</a></li>
-            <li><a class="menu-item" data-target="organizers"><i class="fas fa-info-circle"></i> INFO & CONTACT</a></li>
             <li><a class="menu-item" data-target="map"><i class="fas fa-map-marker-alt"></i> MAP</a></li>
             <li><a class="menu-item" data-target="leaflet"><i class="fas fa-book-open"></i> LEAFLET</a></li>
         </ul>
@@ -575,47 +574,23 @@
 
         </div>
 
-        <div id="view-organizers" class="view-section" style="display: none;">
-            <div class="day-section" style="padding: 20px;">
-                <h2 style="color: var(--accent-color); margin-bottom: 15px;">ADDRESSES AND CONTACTS</h2>
-                <p><strong><i class="fas fa-phone-alt"></i> Emergency numbers:</strong></p>
-                <ul style="list-style: none; padding-left: 20px; margin-bottom: 20px; color: var(--text-muted);">
-                    <li>112 - General e. n.</li>
-                    <li>999 - Ambulance</li>
-                    <li>998 - Fire Brigade</li>
-                    <li>997 - Police</li>
-                </ul>
-
-                <p><strong><i class="fas fa-map-marker-alt"></i> UMG Hostel address:</strong></p>
-                <p style="padding-left: 20px; margin-bottom: 20px; color: var(--text-muted);">Gdynia ul. Maurycego Beniowskiego 20/22</p>
-
-                <p><strong><i class="fas fa-map-marker-alt"></i> The sports hall address:</strong></p>
-                <p style="padding-left: 20px; color: var(--text-muted);">Gdynia ul. Morska 81-87</p>
-            </div>
-        </div>
-
         <div id="view-map" class="view-section full-bleed-map" style="display: none;">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.398777509391!2d18.50908147681065!3d54.52646378577395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda6c3ed450cd7%3A0xed5a46d20ef4a60c!2sUniwersytet%20Morski%20w%20Gdyni!5e0!3m2!1spl!2spl!4v1775852497867!5m2!1spl!2spl" 
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2324.2818961726053!2d18.52865761596798!3d54.51608798022718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda72c49d97033%3A0xc3c6046e729a1b02!2sGdynia%20Maritime%20University!5e0!3m2!1sen!2spl!4v1683100000000!5m2!1sen!2spl" 
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
 
-        <div id="view-leaflet" class="view-section" style="display: none;">
-            <div class="day-section">
-                <div class="day-header">
-                    <i class="fas fa-book-open"></i>
-                    <span class="day-title">Event Leaflet</span>
-                </div>
-                <img src="1.png" alt="Leaflet Page 1" class="leaflet-image" onerror="this.src='https://placehold.co/600x800/050a44/ff5e00?text=Insert+Image+1+Here'">
-                
-                <img src="2.png" alt="Leaflet Page 2" class="leaflet-image" onerror="this.src='https://placehold.co/600x800/050a44/ff5e00?text=Insert+Image+2+Here'">
-            </div>
+        <div id="view-leaflet" class="view-section full-bleed-map" style="display: none;">
+            <iframe 
+                src="ulotka.pdf" 
+                width="100%" 
+                height="100%" 
+                style="border: none;"
+                title="Event Leaflet PDF">
+            </iframe>
         </div>
         
     </main>
@@ -624,10 +599,6 @@
         <div class="bottom-nav-item active" data-target="schedule">
             <i class="fas fa-calendar-alt"></i>
             <span>PLAN</span>
-        </div>
-        <div class="bottom-nav-item" data-target="organizers">
-            <i class="fas fa-info-circle"></i>
-            <span>INFO</span>
         </div>
         <div class="bottom-nav-item" data-target="map">
             <i class="fas fa-map-marked-alt"></i>
