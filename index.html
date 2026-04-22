@@ -232,19 +232,7 @@
             font-size: 13px;
         }
 
-        /* --- Leaflet Images --- */
-        .leaflet-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        .leaflet-image:last-child {
-            border-bottom: none;
-        }
-
-        /* --- Full Bleed Map Class --- */
+        /* --- Full Bleed Map/PDF Class --- */
         .full-bleed-map {
             margin: -20px; 
             height: calc(100vh - var(--top-bar-height) - var(--bottom-nav-height));
@@ -257,6 +245,25 @@
             border: none;
             display: block;
         }
+
+        /* --- Leaflet Images Styling --- */
+        .leaflet-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Space between the two images */
+            padding: 20px;
+            background-color: var(--bg-color); /* Light blue background for the leaflet area */
+            align-items: center; /* Centers the images horizontally */
+        }
+
+        .leaflet-img {
+            max-width: 100%; /* Ensures image doesn't overflow screen width */
+            height: auto;
+            border-radius: 8px; /* Slightly rounded corners */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Nice shadow to make it pop */
+            border: 2px solid var(--panel-bg); /* Thin navy border */
+        }
+
 
         /* --- Bottom Navigation --- */
         .bottom-nav {
@@ -583,14 +590,12 @@
             </iframe>
         </div>
 
-        <div id="view-leaflet" class="view-section full-bleed-map" style="display: none;">
-            <iframe 
-                src="ulotka.pdf" 
-                width="100%" 
-                height="100%" 
-                style="border: none;"
-                title="Event Leaflet PDF">
-            </iframe>
+        <div id="view-leaflet" class="view-section" style="display: none;">
+            <div class="leaflet-container">
+                <img src="1.jpg" alt="Leaflet Page 1" class="leaflet-img" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div style=\'padding:20px; background:white; color:red; border-radius:8px;\'>Nie można załadować pliku 1.jpg. Upewnij się, że plik jest w tym samym folderze co index.html</div>');">
+                
+                <img src="2.jpg" alt="Leaflet Page 2" class="leaflet-img" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div style=\'padding:20px; background:white; color:red; border-radius:8px;\'>Nie można załadować pliku 2.jpg. Upewnij się, że plik jest w tym samym folderze co index.html</div>');">
+            </div>
         </div>
         
     </main>
